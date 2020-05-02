@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Home</title>
-    <link>http://example.org/tags/</link>
+    <link>https://nehajoshi.dev/tags/</link>
     <description>Recent content in Tags on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 21:05:08 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nehajoshi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Debugging</title>
-      <link>http://example.org/tags/debugging/</link>
+      <link>https://nehajoshi.dev/tags/debugging/</link>
       <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
       
-      <guid>http://example.org/tags/debugging/</guid>
+      <guid>https://nehajoshi.dev/tags/debugging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Management</title>
-      <link>http://example.org/tags/management/</link>
+      <link>https://nehajoshi.dev/tags/management/</link>
       <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
       
-      <guid>http://example.org/tags/management/</guid>
+      <guid>https://nehajoshi.dev/tags/management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming</title>
-      <link>http://example.org/tags/programming/</link>
+      <link>https://nehajoshi.dev/tags/programming/</link>
       <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
       
-      <guid>http://example.org/tags/programming/</guid>
+      <guid>https://nehajoshi.dev/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>index</title>
-      <link>http://example.org/tags/index/</link>
+      <link>https://nehajoshi.dev/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/index/</guid>
+      <guid>https://nehajoshi.dev/tags/index/</guid>
       <description></description>
     </item>
     

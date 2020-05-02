@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debugging on Home</title>
-    <link>http://example.org/tags/debugging/</link>
+    <link>https://nehajoshi.dev/tags/debugging/</link>
     <description>Recent content in Debugging on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 21:05:08 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nehajoshi.dev/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Debugging : An under-rated superpower</title>
-      <link>http://example.org/post/debugging/</link>
+      <link>https://nehajoshi.dev/post/debugging/</link>
       <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
       
-      <guid>http://example.org/post/debugging/</guid>
+      <guid>https://nehajoshi.dev/post/debugging/</guid>
       <description>Let us give a simple thought to this question:
  &amp;ldquo;How many times have you debugged some issue today?&amp;rdquo;
  You would be surprised that the number will be quite large than what you had initially expected. Debugging is such an important skill to possess.

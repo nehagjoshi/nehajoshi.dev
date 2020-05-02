@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Management on Home</title>
-    <link>http://example.org/tags/management/</link>
+    <link>https://nehajoshi.dev/tags/management/</link>
     <description>Recent content in Management on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 21:05:08 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/management/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nehajoshi.dev/tags/management/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Leadership Essentials</title>
-      <link>http://example.org/post/leadership_skills/</link>
+      <link>https://nehajoshi.dev/post/leadership_skills/</link>
       <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
       
-      <guid>http://example.org/post/leadership_skills/</guid>
+      <guid>https://nehajoshi.dev/post/leadership_skills/</guid>
       <description>I came across this amazing Udemy course by Chris Croft. I am not into managerial role. But I wanted to have knowledge about the essentials of leadership. So I took up this course and I was very impressed by all the points which were put across during the course. Sharing some points which I had taken while persuing the course. I hope you find it useful :)
 Leadership skills: leader vs manager  [-] Leader more about getting things done [-] Manager more about motivation and knowing what ppl wants etc.</description>
     </item>
