@@ -99,28 +99,32 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 # Types of people
 - [-] Peoples personalities vary.
 - [-] Need to adapt to the different personalities              
-- [-] Manage peopledepending on which type they fall into     
+- [-] Manage peopledepending on which type they fall into  
+   
 #### [1] Analytical: 
-- |==== (1) Intereseted in some amount of security
-- |==== (2) Likes rules, processes, system in place
-- |==== (3) Plenty of explaination of whats going on in the company
-- |==== (4) Keen on self-actualization
+- |==== (1) Intereseted in some amount of security.
+- |==== (2) Likes rules, processes, system in place.
+- |==== (3) Plenty of explaination of whats going on in the company.
+- |==== (4) Keen on self-actualization.
+
 #### [2] Controller: 
-- |==== (1) Hard to manage
-- |==== (2) Easy to motivate, since they are very driven
-- |==== (3) Intereseted in status and self-actualization
+- |==== (1) Hard to manage.
+- |==== (2) Easy to motivate, since they are very driven.
+- |==== (3) Intereseted in status and self-actualization.
+
 #### [3] Enthusiast:
-- |==== (1) Much more socially driven
-- |==== (2) Like to be important
-- |==== (3) Have lots of strengths: Creative, Energy, excitement
-- |==== (4) To manage these kind of people, give them an exciting vision of the future
-- |==== (5) Such people needs controlling so that they stay on tracks
-- |==== (6) Moody
+- |==== (1) Much more socially driven.
+- |==== (2) Like to be important.
+- |==== (3) Have lots of strengths: Creative, Energy, excitement.
+- |==== (4) To manage these kind of people, give them an exciting vision of the future.
+- |==== (5) Such people needs controlling so that they stay on tracks.
+- |==== (6) Moody.
+
 #### [4] Amiable:
-- |==== (1) More concerned with social and security side of things
-- |==== (2) They want to be a part of team. Like to feel the sense of belonging
-- |==== (3) They want to feel looked after. Want to feel that you care
-- |==== (4) Managers need to give time and nurture
+- |==== (1) More concerned with social and security side of things.
+- |==== (2) They want to be a part of team. Like to feel the sense of belonging.
+- |==== (3) They want to feel looked after. Want to feel that you care.
+- |==== (4) Managers need to give time and nurture.
 
 # How will these types of people be in case if they are the managers?
 
