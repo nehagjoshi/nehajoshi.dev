@@ -1,0 +1,54 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Home"
+theme = "hugo.386"
+
+[params]
+    # The name to display as main title in the home page
+    mainpagetitle = "My Thinking Slate"
+
+    # The subtitle to display under the title in the home page
+    mainpagesubtitle = "Welcome to the early 90s!" 
+
+    # The name to display as main title in the home page
+    mainpagedesc = "My love for systems and C programming is very well reflected in this theme! I bet this look will make you feel nostalgic :)"
+
+    # The name to display in the copyright section in the footer
+    copyrightname = "Neha Joshi"
+
+    # The url to use as link in the copyright name in the footer. Leave empty to use none.
+    copyrighturl = "http://jmf-portfolio.netlify.com"
+
+    # Urls for social networks
+    facebook = "https://www.facebook.com/neha.g.joshi"
+    twitter = "https://twitter.com/nehagjoshi"
+    linkedin = "https://www.linkedin.com/in/neha-joshi-8a660459"
+
+    # Enables or disables the loading animations. false activates them. Default is false.
+    loadfastload = false
+
+    # Sets the speed for the page loading effect. Default is 1.0.
+    loadspeedfactor = 1.0
+
+    # Enables or disables the second flyby cursor. Default is false.
+    loadonepass = true
+    
+[menu]
+  # This displays buttons in the navbar to access your contents
+   
+  [[menu.main]]
+    identifier = "about_me"
+    name = "About Me"
+    url = "/about/"       # The path can lead to a content folder too.
+    weight = 20
+    
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog posts"
+    url = "/post/"       # The path can lead to a content folder too.
+    weight = 20    
+    
+[taxonomies]
+category = "categories"
+tag = "tags"
+    
