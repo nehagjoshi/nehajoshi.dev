@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://nehajoshi.dev"
 languageCode = "en-us"
 title = "Home"
 theme = "hugo.386"
@@ -17,7 +17,7 @@ theme = "hugo.386"
     copyrightname = "Neha Joshi"
 
     # The url to use as link in the copyright name in the footer. Leave empty to use none.
-    copyrighturl = "http://jmf-portfolio.netlify.com"
+    copyrighturl = "https://nehajoshi.dev"
 
     # Urls for social networks
     facebook = "https://www.facebook.com/neha.g.joshi"
