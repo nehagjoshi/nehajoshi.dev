@@ -6,6 +6,7 @@ draft = false
 description = "The Recipe of Good Leadership"
 tags = [
     "Management",
+    "Leadership"
 ]
 +++
 
@@ -50,14 +51,14 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - [-] Depends on what you do, not what you are.
 - [-] Anybody can be a good leader if you know the right thing to do
 - [-] Action centered leadership:
--  |==== (a) Work gets done
--  |==== (b) Team is happy
--  |==== (c) Individuals are happy
+-  |==== (1) Work gets done
+-  |==== (2) Team is happy
+-  |==== (3) Individuals are happy
 - [-] Stages in which tasks need to be done:
--  |==== (a) Setting objective
--  |==== (b) Planning
--  |==== (c) Briefing
--  |==== (d) Action
+-  |==== (1) Setting objective
+-  |==== (2) Planning
+-  |==== (3) Briefing
+-  |==== (4) Action
         
 ## MOTIVATION:
 
@@ -71,9 +72,9 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 # The Management Potato
 - [-] Thanking people is very important
 - [-] Potato of performance:
-- |==== (a) Good performance
-- |==== (b) expert
-- |==== (c) needs improvement
+- |==== (1) Good performance
+- |==== (2) expert
+- |==== (3) needs improvement
 - [-] Manager should focus on all the areas
 - [-] Can use shit sandwich while talking about improvement
 - [-] Good-bad-good news
@@ -100,58 +101,58 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - [-] Need to adapt to the different personalities              
 - [-] Manage peopledepending on which type they fall into     
 #### [1] Analytical: 
-- |==== (a) Intereseted in some amount of security
-- |==== (b) Likes rules, processes, system in place
-- |==== (c) Plenty of explaination of whats going on in the company
-- |==== (d) Keen on self-actualization
+- |==== (1) Intereseted in some amount of security
+- |==== (2) Likes rules, processes, system in place
+- |==== (3) Plenty of explaination of whats going on in the company
+- |==== (4) Keen on self-actualization
 #### [2] Controller: 
-- |==== (a) Hard to manage
-- |==== (b) Easy to motivate, since they are very driven
-- |==== (c) Intereseted in status and self-actualization
+- |==== (1) Hard to manage
+- |==== (2) Easy to motivate, since they are very driven
+- |==== (3) Intereseted in status and self-actualization
 #### [3] Enthusiast:
-- |==== (a) Much more socially driven
-- |==== (b) Like to be important
-- |==== (c) Have lots of strengths: Creative, Energy, excitement
-- |==== (d) To manage these kind of people, give them an exciting vision of the future
-- |==== (e) Such people needs controlling so that they stay on tracks
-- |==== (f) Moody
+- |==== (1) Much more socially driven
+- |==== (2) Like to be important
+- |==== (3) Have lots of strengths: Creative, Energy, excitement
+- |==== (4) To manage these kind of people, give them an exciting vision of the future
+- |==== (5) Such people needs controlling so that they stay on tracks
+- |==== (6) Moody
 #### [4] Amiable:
-- |==== (a) More concerned with social and security side of things
-- |==== (b) They want to be a part of team. Like to feel the sense of belonging
-- |==== (c) They want to feel looked after. Want to feel that you care
-- |==== (d) Managers need to give time and nurture
+- |==== (1) More concerned with social and security side of things
+- |==== (2) They want to be a part of team. Like to feel the sense of belonging
+- |==== (3) They want to feel looked after. Want to feel that you care
+- |==== (4) Managers need to give time and nurture
 
 # How will these types of people be in case if they are the managers?
 
 #### [1] Analytical: 
-- |==== (a) Very fair boss and a good communicator.
-- |==== (b) Not a natural communicator.
-- |==== (c) More of a 1To1 communicator.
-- |==== (d) Wont enjoy giving inspirational talks. 
-- |==== (e) Need to work on vision.
-- |==== (f) Not risk takers.
-- |==== (g) But they do like to have a plan. 
-- |==== (h) Sensible and a nice organised leader
+- |==== (1) Very fair boss and a good communicator.
+- |==== (2) Not a natural communicator.
+- |==== (3) More of a 1To1 communicator.
+- |==== (4) Wont enjoy giving inspirational talks.
+- |==== (5) Need to work on vision.
+- |==== (6) Not risk takers.
+- |==== (7) But they do like to have a plan.
+- |==== (8) Sensible and a nice organised leader
 
 #### [2] Controller: 
-- |==== (a) Very dynamic leader.
-- |==== (b) Lead from the front.
-- |==== (c) Solve problems as they go along.
-- |==== (d) May not be a very sympathetic leader.
-- |==== (e) May leave people behind, if they cant keep up.
-- |==== (f) Need to make an effort to be caring.
+- |==== (1) Very dynamic leader.
+- |==== (2) Lead from the front.
+- |==== (3) Solve problems as they go along.
+- |==== (4) May not be a very sympathetic leader.
+- |==== (5) May leave people behind, if they cant keep up.
+- |==== (6) Need to make an effort to be caring.
 
 #### [3] Enthusiast:
-- |==== (a) Very good leader.
-- |==== (b) Naturally enthusiastic vision.
-- |==== (c) Must remember to communicate enough details to people like Analyticals.
-- |==== (d) An inspirational Leader.
+- |==== (1) Very good leader.
+- |==== (2) Naturally enthusiastic vision.
+- |==== (3) Must remember to communicate enough details to people like Analyticals.
+- |==== (4) An inspirational Leader.
 
 #### [4] Amiable:
-- |==== (a) Probably not going to push themselves forward to be the leader.
-- |==== (b) Can actually make a very good senior manager. Because, at that level, quite a lot of job is actually about judging people.
-- |==== (c) Moving people into the right kind of jobs.
-- |==== (d) Not a pushy thrusting type of manager. Hence, may never become a top boss.
+- |==== (1) Probably not going to push themselves forward to be the leader.
+- |==== (2) Can actually make a very good senior manager. Because, at that level, quite a lot of job is actually about judging people.
+- |==== (3) Moving people into the right kind of jobs.
+- |==== (4) Not a pushy thrusting type of manager. Hence, may never become a top boss.
                         
 # Is money a motivator?        
 - [-] Mostly No
@@ -231,35 +232,35 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - [-] Use a sliding scale to make sure that people are keeping up the trust
 - [-] Trust leads to ownership. People will take more care.
 - [-] Advantages of Delegation:
-- |==== (a) Motivation
-- |==== (b) Better work
-- |==== (c) Learning
-- |==== (d) You dont have to
-- |==== (e) Less risk
-- |==== (f) Promotions loom
+- |==== (1) Motivation
+- |==== (2) Better work
+- |==== (3) Learning
+- |==== (4) You dont have to
+- |==== (5) Less risk
+- |==== (6) Promotions loom
 - [-] Objections to Delegating:
-- |==== (a) Fear of unknown (can be solved by monitoring)
-- |==== (b) Fear of overtaking
-- |==== (c) Too busy to explain
-- |==== (d) I like the work (Have to let it go, pass it down)
-- |==== (e) I may run out of work
-- |==== (f) My team are already too busy
+- |==== (1) Fear of unknown (can be solved by monitoring)
+- |==== (2) Fear of overtaking
+- |==== (3) Too busy to explain
+- |==== (4) I like the work (Have to let it go, pass it down)
+- |==== (5) I may run out of work
+- |==== (6) My team are already too busy
 - [-] Would you be missed?
 - [-] What if I wasnt here?
 - [-] Create a system, make someone responsible
 - [-] How to delegate:
-- |==== (a) Delegate at 80% (even if they can do 80% good job)
-- |==== (b) How will they get to 100%?
-- |==== (c) Should you challenge people? (If not time bound, giv to new people)
+- |==== (1) Delegate at 80% (even if they can do 80% good job)
+- |==== (2) How will they get to 100%?
+- |==== (3) Should you challenge people? (If not time bound, giv to new people)
 - [-] Words to use while delegating
-- |==== (a) What you want
-- |==== (b) Why its important
-- |==== (c) Why them?
-- |==== (d) What the limits are
-- |==== (e) Reporting processes
-- |==== (f) Offer support
-- |==== (g) Check if they are okay
-- |==== (h) "You can do it"
+- |==== (1) What you want
+- |==== (2) Why its important
+- |==== (3) Why them?
+- |==== (4) What the limits are
+- |==== (5) Reporting processes
+- |==== (6) Offer support
+- |==== (7) Check if they are okay
+- |==== (8) "You can do it"
 - [-] Taking the monkey
 - [-] Dont accept what u cant do
 - [-] Dont take the monkey
@@ -323,31 +324,31 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
     
 # Daily, Weekly, Monthly, Yearly
 - [-] Daily:
-- |==== (a) Management by walking about
-- |==== (B) Thinking/vision
-- |==== (c) Jobs "to do" list at EOD
+- |==== (1) Management by walking about
+- |==== (2) Thinking/vision
+- |==== (3) Jobs "to do" list at EOD
 - [-] Weekly
-- |==== (a) Thank everyone who works for you
-- |==== (b) Team meetings
-- |==== (c) 1:1 coaching of one person per week
-- |==== (d) Time planning
+- |==== (1) Thank everyone who works for you
+- |==== (2) Team meetings
+- |==== (3) 1:1 coaching of one person per week
+- |==== (4) Time planning
 - [-] Monthly
-- |==== (a) Review each person's progress relative to the goals set at their appraisals
-- |==== (b) Project progress review meetings for each project
-- |==== (c) Do a motivation review of each person
-- |==== (d) Are they motivated
-- |==== (e) What challenges have they been given
-- |==== (f) Do each one have ownership of something
-- |==== (g) What are they learning
-- |==== (h) What coaching might they need?
+- |==== (1) Review each person's progress relative to the goals set at their appraisals
+- |==== (2) Project progress review meetings for each project
+- |==== (3) Do a motivation review of each person
+- |==== (4) Are they motivated
+- |==== (5) What challenges have they been given
+- |==== (6) Do each one have ownership of something
+- |==== (7) What are they learning
+- |==== (8) What coaching might they need?
 - [-] Yearly
-- |==== (a) Appraisals
-- |==== (b) Ask people about feedback for yourself
-- |==== (c) Address teams on past, present and future
-- |==== (d) Do between a day and a week of "Back to the floor"
-- |==== (e) Review your personal goals and life quality
-- |==== (f) Go on a course of some sort - get new ideas
-- |==== (g) Read a book on the subject of your work
+- |==== (1) Appraisals
+- |==== (2) Ask people about feedback for yourself
+- |==== (3) Address teams on past, present and future
+- |==== (4) Do between a day and a week of "Back to the floor"
+- |==== (5) Review your personal goals and life quality
+- |==== (6) Go on a course of some sort - get new ideas
+- |==== (7) Read a book on the subject of your work
         
 #### I would really recommend everyone to opt for this course. You won't get the whole picture just by looking at the notes :)
 
