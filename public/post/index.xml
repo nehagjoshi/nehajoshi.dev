@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Posts on Home</title>
+    <link>http://example.org/post/</link>
+    <description>Recent content in Blog Posts on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2020 21:05:08 +0530</lastBuildDate>
+    
+	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging : An under-rated superpower</title>
+      <link>http://example.org/post/debugging/</link>
+      <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
+      
+      <guid>http://example.org/post/debugging/</guid>
+      <description>Let us give a simple thought to this question:
+ &amp;ldquo;How many times have you debugged some issue today?&amp;rdquo;
+ You would be surprised that the number will be quite large than what you had initially expected. Debugging is such an important skill to possess.
+May it be:  -The setup which is not working -Unable to connect to Zoom meetings (this has become a new way of working in this quarantine period) -VNC session not getting connected -Bluetooth not getting connected to the speaker  And countless other experiences!</description>
+    </item>
+    
+    <item>
+      <title>Leadership Essentials</title>
+      <link>http://example.org/post/leadership_skills/</link>
+      <pubDate>Sun, 26 Apr 2020 21:05:08 +0530</pubDate>
+      
+      <guid>http://example.org/post/leadership_skills/</guid>
+      <description>I came across this amazing Udemy course by Chris Croft. I am not into managerial role. But I wanted to have knowledge about the essentials of leadership. So I took up this course and I was very impressed by all the points which were put across during the course. Sharing some points which I had taken while persuing the course. I hope you find it useful :)
+Leadership skills: leader vs manager  [-] Leader more about getting things done [-] Manager more about motivation and knowing what ppl wants etc.</description>
+    </item>
+    
+  </channel>
+</rss>
