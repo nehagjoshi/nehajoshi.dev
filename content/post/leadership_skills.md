@@ -10,7 +10,7 @@ tags = [
 ]
 +++
 
-I came across this amazing Udemy course by Chris Croft. I am not into managerial role. But I wanted to have knowledge about the essentials of leadership. So I took up this course and I was very impressed by all the points which were put across during the course. Sharing some points which I had taken while persuing the course. I hope you find it useful :)
+I came across this amazing Udemy course by Chris Croft: "Leadership: Practical Leadership Skills". I am not into a managerial role. But I wanted to have knowledge about the essentials of leadership. So I took up this course and I was very impressed by all the points which were put across during the course. Sharing some points which I had taken while pursuing the course. I hope you find it useful :)
 
 
 ## Leadership skills:
@@ -23,7 +23,7 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 # A Leader's responsibility
 
 - [-] Do the main work for sure. Anything else is good to have.
-- [-] Train ppl for tasks which is not necessarily to be done by the captain
+- [-] Train ppl for tasks which are not necessarily to be done by the captain
 - [-] Have a system in place
 - [-] Keep the ppl appreciated and motivated
 - [-] Make sure to check on quality from time to time
@@ -38,8 +38,8 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 
 # Methods of Monitoring
 
-- [-] Management by wandering about (MBWA). Walk around the whole office every day. Have a real feel for what's happening. communication is very important
-- [-] Back to the floor: for a stipulated time per year, try to go back to the basic job and try doing it. No need to be secretive. Better decision making due to this experience.
+- [-] Management by wandering about (MBWA). Walk around the whole office every day. Have a real feel for what's happening. Communication is very important
+- [-] Back to the floor: For a stipulated time per year, try to go back to the basic job and try doing it. No need to be secretive. Better decision making due to this experience.
 
 # Communication
 - [-] Information cascade: Pass down at every level
@@ -97,9 +97,9 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
                |Take their time           |    Outspoken           |
 ```
 # Types of people
-- [-] Peoples personalities vary.
+- [-] Personalities vary.
 - [-] Need to adapt to the different personalities              
-- [-] Manage peopledepending on which type they fall into  
+- [-] Manage people depending on which type they fall into  
    
 #### [1] Analytical: 
 - |==== (1) Intereseted in some amount of security.
@@ -132,11 +132,11 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - |==== (1) Very fair boss and a good communicator.
 - |==== (2) Not a natural communicator.
 - |==== (3) More of a 1To1 communicator.
-- |==== (4) Wont enjoy giving inspirational talks.
+- |==== (4) Won't enjoy giving inspirational talks.
 - |==== (5) Need to work on vision.
-- |==== (6) Not risk takers.
-- |==== (7) But they do like to have a plan.
-- |==== (8) Sensible and a nice organised leader
+- |==== (6) Not a risk taker.
+- |==== (7) They do like to have a plan.
+- |==== (8) Sensible and a nicely organised leader
 
 #### [2] Controller: 
 - |==== (1) Very dynamic leader.
@@ -185,7 +185,7 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - [10] Know your people
 - [11] Offer learning
 - [12] Show progress
-- [13] Co-develop (growth &career)
+- [13] Co-develop (growth & career)
 - [14] Reach potentials
 - [15] Help to grow
 - [16] Keep things varied
@@ -195,7 +195,7 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - [20] Set an example (be positive)
     
 # Leadership Styles
-- [-] Its all about control.
+- [-] It's all about control.
 - [1] Tells: 
 - |==== Just telling what you want. 
 - |==== Not so motivational.
@@ -218,9 +218,9 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - |==== Motivational for them
 - [6] Abdicate:
 - |==== Delegate. 
-- |==== Similar to sharing, but here you dont care about the decision.
+- |==== Similar to sharing, but here you don't care about the decision.
 - |==== So you don't monitor
-- |==== Dont give support
+- |==== Don't give support
 - |==== More likely to go wrong
 - [7] Empower:
 - |==== Extend support
@@ -239,7 +239,7 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - |==== (1) Motivation
 - |==== (2) Better work
 - |==== (3) Learning
-- |==== (4) You dont have to
+- |==== (4) You don't have to do it
 - |==== (5) Less risk
 - |==== (6) Promotions loom
 - [-] Objections to Delegating:
@@ -255,7 +255,7 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - [-] How to delegate:
 - |==== (1) Delegate at 80% (even if they can do 80% good job)
 - |==== (2) How will they get to 100%?
-- |==== (3) Should you challenge people? (If not time bound, giv to new people)
+- |==== (3) Should you challenge people? (If not time bound, give to new people)
 - [-] Words to use while delegating
 - |==== (1) What you want
 - |==== (2) Why its important
@@ -266,14 +266,14 @@ I came across this amazing Udemy course by Chris Croft. I am not into managerial
 - |==== (7) Check if they are okay
 - |==== (8) "You can do it"
 - [-] Taking the monkey
-- [-] Dont accept what u cant do
-- [-] Dont take the monkey
+- [-] Don't accept what u cant do
+- [-] Don't take the monkey
 - [-] Ask what have you tried so far?
 - [-] Follow up
 - [-] Ask them to go and come up with a plan
 - [-] Which one do YOU think will work?
 - [-] Get them to do it and follow up
-- [-] Its a failure to take it
+- [-] It's a failure to take it
 - [-] Pass on the authority
 
 # Leadership Styles Part 2
