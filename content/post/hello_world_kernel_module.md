@@ -26,7 +26,7 @@ We are not going to become masters in the field which we work in, unless we put 
 Let us take a look at what this whole thing means:
 
 #### Kernel module
-
+```
     #include <linux/init.h>
     #include <linux/module.h>
     
@@ -49,6 +49,7 @@ Let us take a look at what this whole thing means:
     MODULE_DESCRIPTION("This is a Hello World Module!");
     MODULE_VERSION("1.0");
     MODULE_AUTHOR("That's ME! Yay!");
+```
 
 - [-] init.h is needed to specify your initialization and cleanup functions.
 - [-] module.h contains definitions of symbols and functions needed by loadable modules.
