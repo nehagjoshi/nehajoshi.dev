@@ -53,7 +53,7 @@ Let us take a look at what this whole thing means:
 
 - [-] init.h is needed to specify your initialization and cleanup functions.
 - [-] module.h contains definitions of symbols and functions needed by loadable modules.
-- [-] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is "tainted" when the module is loaded.
+- [-] MODULE_LICENSE: Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is "tainted" when the module is loaded.
 - [-] hello_init: Routine called during initialization. 
 - [-] hello_exit: outine called during exit/cleanup.
 - [-] MODULE_ : Information about the kernel module.
@@ -102,8 +102,8 @@ Let us take a look at what this whole thing means:
 
 #### List the loaded modules:
 
-- $ lsmod | grep hello
-- hello                  16384  0
+* $ lsmod | grep hello
+* hello                  16384  0
 
 - [-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.
 
