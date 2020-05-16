@@ -50,12 +50,12 @@ Let us take a look at what this whole thing means:
     MODULE_VERSION("1.0");
     MODULE_AUTHOR("That's ME! Yay!");
 
-- [*] init.h is needed to specify your initialization and cleanup functions
-- [*] module.h contains definitions of symbols and functions needed by loadable modules
-- [*] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is "tainted" when the module is loaded
-- [*] hello_init: Routine called during initialization 
-- [*] hello_exit: outine called during exit/cleanup
-- [*] MODULE_ : Information about the kernel module
+- [-] init.h is needed to specify your initialization and cleanup functions.
+- [-] module.h contains definitions of symbols and functions needed by loadable modules.
+- [-] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is "tainted" when the module is loaded.
+- [-] hello_init: Routine called during initialization. 
+- [-] hello_exit: outine called during exit/cleanup.
+- [-] MODULE_ : Information about the kernel module.
 
 #### Makefile:
     obj-m += hello.o
@@ -76,10 +76,10 @@ Let us take a look at what this whole thing means:
 * [11249545.023883] Hello, World!
 * [11249561.607050] Goodbye, Cruel World!
 
-- [*] insmod - Simple program to insert a module into the Linux Kernel
-- [*] rmmod - Simple program to remove a module from the Linux Kernel
-- [*] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/**kernel-version**. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.
-- [*] To check the kernel version which is currently being used on your setup, use "uname -r". The -r option prints the kernel release version.
+- [-] insmod - Simple program to insert a module into the Linux Kernel.
+- [-] rmmod - Simple program to remove a module from the Linux Kernel.
+- [-] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/**kernel-version**. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.
+- [-] To check the kernel version which is currently being used on your setup, use "uname -r". The -r option prints the kernel release version.
 
 #### Module Information:
 
@@ -95,14 +95,14 @@ Let us take a look at what this whole thing means:
 * name:           hello
 * vermagic:       4.15.0-65-generic SMP mod_unload
 
-- [*] modinfo - Show information about a Linux Kernel module
+- [-] modinfo - Show information about a Linux Kernel module.
 
 #### List the loaded modules:
 
 * $ lsmod | grep hello
 * hello                  16384  0
 
-- [*] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.
+- [-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.
 
 #### Passing params to the module:
 ### Updated kernel module:
@@ -153,9 +153,9 @@ Let us take a look at what this whole thing means:
 * **[11250272.600605] Hello, Avengers**
 * **[11250277.595506] Goodbye, Avengers!**
 
-- [*] In the updated kernel code above, we have initialized the "whom" variable to "World" to take care of the scenario when no params are passed during module load. Hence, when the module is loaded without passing any params, we see the usual "Hellp, World" print.
-- [*] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry. 
-- [*] S_IRUGO: Present READ permissions to User/Group/others
+- [-] In the updated kernel code above, we have initialized the "whom" variable to "World" to take care of the scenario when no params are passed during module load. Hence, when the module is loaded without passing any params, we see the usual "Hello, World" print.
+- [-] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry. 
+- [-] S_IRUGO: Present READ permissions to User/Group/others.
 
 These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understandig of the concepts in picture.
 
