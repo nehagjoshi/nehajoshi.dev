@@ -86,7 +86,7 @@
 </code></pre><ul>
 <li>[-] init.h is needed to specify your initialization and cleanup functions.</li>
 <li>[-] module.h contains definitions of symbols and functions needed by loadable modules.</li>
-<li>[-] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is &ldquo;tainted&rdquo; when the module is loaded.</li>
+<li>[-] MODULE_LICENSE: Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is &ldquo;tainted&rdquo; when the module is loaded.</li>
 <li>[-] hello_init: Routine called during initialization.</li>
 <li>[-] hello_exit: outine called during exit/cleanup.</li>
 <li>[-] MODULE_ : Information about the kernel module.</li>
@@ -134,15 +134,11 @@
 </ul>
 <h4 id="list-the-loaded-modules">List the loaded modules:</h4>
 <ul>
-<li>
-<p>$ lsmod | grep hello</p>
-</li>
-<li>
-<p>hello                  16384  0</p>
-</li>
-<li>
-<p>[-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</p>
-</li>
+<li>$ lsmod | grep hello</li>
+<li>hello                  16384  0</li>
+</ul>
+<ul>
+<li>[-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</li>
 </ul>
 <h4 id="passing-params-to-the-module">Passing params to the module:</h4>
 <h3 id="updated-kernel-module">Updated kernel module:</h3>
