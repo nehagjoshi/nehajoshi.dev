@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://nehajoshi.dev/favicon.ico">
+    <link rel="canonical" href="https://nehajoshi.dev">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head><body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://nehajoshi.dev">Home</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About Me</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/post/">
+                                    
+                                    <span>Blog posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>Introduction to loadable kernel module - Fri, May 15, 2020</h1>
+    </div>
+    <p class="lead">A Hello World Kernel module</p>
+    <p>Let us start by asking a simple question:</p>
+<blockquote>
+<p><strong>What is a Device Driver?</strong></p>
+</blockquote>
+<p>If I were to put a definition together for a device driver, I would say, its the brain of any hardware. Telling the body (hardware) what to do, telling the world (operation system), what the body is capable of. Quite literally, if the device driver malfunctions, or is not present at all, then the device is as good as dead, unusable.</p>
+<p>When I had joined NVIDIA, I was just starting out a career in system level programming. Not something to be proud about, but for a good number of years, I was unaware of even the init function which is called when the NVIDIA device driver is loaded. I was just looking at the parts of the code which was relevant to the work which I was doing, and ignoring the rest. Looking back at it, I can say that its not the right approach to take at all. When you are working on something, you should go out of your way to know the working of the code inside out, get familiar with it, and not wait till you are assigned some task which will take you to that area.</p>
+<p>I was watching an excellent talk by Jonathan Blow which he had presented at DevGAMM 2019: “Preventing the Collapse of Civilization”. The summary of the same has been listed quite wonderfully by Vedang in one of his blogs: (<a href="https://vedang.me/blog/preventing-the-collapse-of-civilization/">preventing-the-collapse-of-civilization</a>). To quote one of the points which caught me off guart was: &ldquo;Software is in decline. Both software robustness and programmer productivity is declining. We need to fight complexity and strive for simplicity in every step if we want to battle degradation and loss of capability&rdquo;.</p>
+<p>We are not going to become masters in the field which we work in, unless we put in extra efforts to get acquainted with it. As a baby step towards unfurling the mystery of the behind-the-scene working of a device driver, I thought that a &ldquo;hello world kernel module&rdquo; would prove to be an excellent example. To quote from Chapter 1: &ldquo;An introduction to Device drivers&rdquo; from the amazing book: &ldquo;Linux Device Drivers&rdquo;:
+<strong>Each piece of code that can be added to the kernel at runtime is called a module. Each module is made up of object code that can be dynamically linked to the running kernel by the insmod program and can be unlinked by the rmmod program</strong></p>
+<p>Let us take a look at what this whole thing means:</p>
+<h4 id="kernel-module">Kernel module</h4>
+<pre><code>#include &lt;linux/init.h&gt;
+#include &lt;linux/module.h&gt;
+
+MODULE_LICENSE(&quot;Dual BSD/GPL&quot;);
+                                                  
+static int hello_init(void)
+{
+    printk(KERN_ALERT &quot;Hello, World!\n&quot;);
+    return 0;
+}
+
+static void hello_exit(void)
+{
+    printk(KERN_ALERT &quot;Goodbye, Cruel World!\n&quot;);
+}
+
+module_init(hello_init);
+module_exit(hello_exit);
+
+MODULE_DESCRIPTION(&quot;This is a Hello World Module!&quot;);
+MODULE_VERSION(&quot;1.0&quot;);
+MODULE_AUTHOR(&quot;That's ME! Yay!&quot;);
+</code></pre>
+<ul>
+<li>[*] init.h is needed to specify your initialization and cleanup functions</li>
+<li>[*] module.h contains definitions of symbols and functions needed by loadable modules</li>
+<li>[*] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is &ldquo;tainted&rdquo; when the module is loaded</li>
+<li>[*] hello_init: Routine called during initialization</li>
+<li>[*] hello_exit: outine called during exit/cleanup</li>
+<li>[*] MODULE_ : Information about the kernel module</li>
+</ul>
+<h4 id="makefile">Makefile:</h4>
+<pre><code>obj-m += hello.o
+
+all:
+        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
+clean:
+        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+</code></pre>
+<h4 id="loading-and-unloading-the-kernel-module">Loading and unloading the kernel module:</h4>
+<ul>
+<li>root@nehajoshi:# insmod hello.ko</li>
+<li>root@nehajoshi:# dmesg</li>
+<li>[11249545.023883] Hello, World!</li>
+<li>root@nehajoshi:# rmmod hello</li>
+<li>root@nehajoshi:# dmesg</li>
+<li>[11249545.023883] Hello, World!</li>
+<li>[11249561.607050] Goodbye, Cruel World!</li>
+</ul>
+<ul>
+<li>[*] insmod - Simple program to insert a module into the Linux Kernel</li>
+<li>[*] rmmod - Simple program to remove a module from the Linux Kernel</li>
+<li>[*] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/<strong>kernel-version</strong>. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.</li>
+<li>[*] To check the kernel version which is currently being used on your setup, use &ldquo;uname -r&rdquo;. The -r option prints the kernel release version.</li>
+</ul>
+<h4 id="module-information">Module Information:</h4>
+<ul>
+<li>$ modinfo hello.ko</li>
+<li>filename:       /home/nehajoshi/module/hello.ko</li>
+<li>author:         That&rsquo;s ME! Yay!</li>
+<li>version:        1.0</li>
+<li>description:    This is a Hello World Module!</li>
+<li>license:        Dual BSD/GPL</li>
+<li>srcversion:     87A4D3A2BE3E27804090F0B</li>
+<li>depends:</li>
+<li>retpoline:      Y</li>
+<li>name:           hello</li>
+<li>vermagic:       4.15.0-65-generic SMP mod_unload</li>
+</ul>
+<ul>
+<li>[*] modinfo - Show information about a Linux Kernel module</li>
+</ul>
+<h4 id="list-the-loaded-modules">List the loaded modules:</h4>
+<ul>
+<li>$ lsmod | grep hello</li>
+<li>hello                  16384  0</li>
+</ul>
+<ul>
+<li>[*] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</li>
+</ul>
+<h4 id="passing-params-to-the-module">Passing params to the module:</h4>
+<h3 id="updated-kernel-module">Updated kernel module:</h3>
+<pre><code>#include &lt;linux/init.h&gt;
+#include &lt;linux/module.h&gt;
+#include &lt;linux/moduleparam.h&gt;
+
+MODULE_LICENSE(&quot;Dual BSD/GPL&quot;);
+
+static char *whom = &quot;World&quot;;
+
+static int hello_init(void)
+{
+    printk(KERN_ALERT &quot;Hello, %s\n&quot;, whom);
+    return 0;
+}
+
+static void hello_exit(void)
+{
+    printk(KERN_ALERT &quot;Goodbye, %s!\n&quot;, whom);
+}
+
+module_init(hello_init);
+module_exit(hello_exit);
+module_param(whom, charp, S_IRUGO);
+
+MODULE_DESCRIPTION(&quot;This is a Hello World Module!&quot;);
+MODULE_VERSION(&quot;1.0&quot;);
+MODULE_AUTHOR(&quot;That's ME! Yay!&quot;);
+</code></pre>
+<h3 id="output">Output:</h3>
+<ul>
+<li>root@nehajoshi:# insmod hello.ko</li>
+<li>root@nehajoshi:# dmesg</li>
+<li>[11250251.788505] Hello, World</li>
+<li>root@nehajoshi:# rmmod hello</li>
+<li>root@nehajoshi:# dmesg</li>
+<li>[11250251.788505] Hello, World</li>
+<li>[11250257.595919] Goodbye, World!</li>
+<li>root@nehajoshi:# dmesg -c</li>
+<li>[11250251.788505] Hello, World</li>
+<li>[11250257.595919] Goodbye, World!</li>
+<li>root@nehajoshi:# <strong>insmod hello.ko whom=&quot;Avengers&rdquo;</strong></li>
+<li>root@nehajoshi:# dmesg</li>
+<li><strong>[11250272.600605] Hello, Avengers</strong></li>
+<li>root@nehajoshi:# rmmod hello</li>
+<li>root@nehajoshi:# dmesg</li>
+<li><strong>[11250272.600605] Hello, Avengers</strong></li>
+<li><strong>[11250277.595506] Goodbye, Avengers!</strong></li>
+</ul>
+<ul>
+<li>[*] In the updated kernel code above, we have initialized the &ldquo;whom&rdquo; variable to &ldquo;World&rdquo; to take care of the scenario when no params are passed during module load. Hence, when the module is loaded without passing any params, we see the usual &ldquo;Hellp, World&rdquo; print.</li>
+<li>[*] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry.</li>
+<li>[*] S_IRUGO: Present READ permissions to User/Group/others</li>
+</ul>
+<p>These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understandig of the concepts in picture.</p>
+<p>I hope this helps :)</p>
+<p>Happy Coding!</p>
+
+    <h4><a href="https://nehajoshi.dev">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+        &copy; 
+        <a href="https://nehajoshi.dev" target="_blank">
+            Neha Joshi
+        </a>
+        <span id="thisyear">2020</span>
+        
+    </p>
+    <p class="text-center">
+        <a href="https://www.facebook.com/neha.g.joshi">Facebook</a> 
+        <a href="https://twitter.com/nehagjoshi">Twitter</a> 
+        <a href="https://www.linkedin.com/in/neha-joshi-8a660459">Linkedin</a> 
+        
+        
+    </p>
+</footer>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: false ,
+        onePass: true , 
+        speedFactor: 1 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></body>
+</html>

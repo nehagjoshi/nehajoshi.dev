@@ -6,10 +6,21 @@
     <description>Recent content in Blog Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2020 21:05:08 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 18:05:08 +0530</lastBuildDate>
     
 	<atom:link href="https://nehajoshi.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to loadable kernel module</title>
+      <link>https://nehajoshi.dev/post/hello_world_kernel_module/</link>
+      <pubDate>Fri, 15 May 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/post/hello_world_kernel_module/</guid>
+      <description>Let us start by asking a simple question:
+ What is a Device Driver?
+ If I were to put a definition together for a device driver, I would say, its the brain of any hardware. Telling the body (hardware) what to do, telling the world (operation system), what the body is capable of. Quite literally, if the device driver malfunctions, or is not present at all, then the device is as good as dead, unusable.</description>
+    </item>
     
     <item>
       <title>Debugging : An under-rated superpower</title>

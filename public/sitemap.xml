@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nehajoshi.dev/post/</loc>
+    <lastmod>2020-05-15T18:05:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nehajoshi.dev/tags/device-drivers/</loc>
+    <lastmod>2020-05-15T18:05:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nehajoshi.dev/post/hello_world_kernel_module/</loc>
+    <lastmod>2020-05-15T18:05:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nehajoshi.dev/tags/kernel-module/</loc>
+    <lastmod>2020-05-15T18:05:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nehajoshi.dev/tags/programming/</loc>
+    <lastmod>2020-05-15T18:05:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nehajoshi.dev/tags/</loc>
+    <lastmod>2020-05-15T18:05:08+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nehajoshi.dev/</loc>
     <lastmod>2020-04-26T21:05:08+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://nehajoshi.dev/about/</loc>
-    <lastmod>2020-04-26T21:05:08+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nehajoshi.dev/post/</loc>
     <lastmod>2020-04-26T21:05:08+05:30</lastmod>
   </url>
   
@@ -39,16 +64,6 @@
   
   <url>
     <loc>https://nehajoshi.dev/tags/management/</loc>
-    <lastmod>2020-04-26T21:05:08+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nehajoshi.dev/tags/programming/</loc>
-    <lastmod>2020-04-26T21:05:08+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nehajoshi.dev/tags/</loc>
     <lastmod>2020-04-26T21:05:08+05:30</lastmod>
   </url>
   
