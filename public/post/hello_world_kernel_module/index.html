@@ -85,12 +85,12 @@ MODULE_VERSION(&quot;1.0&quot;);
 MODULE_AUTHOR(&quot;That's ME! Yay!&quot;);
 </code></pre>
 <ul>
-<li>[*] init.h is needed to specify your initialization and cleanup functions</li>
-<li>[*] module.h contains definitions of symbols and functions needed by loadable modules</li>
-<li>[*] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is &ldquo;tainted&rdquo; when the module is loaded</li>
-<li>[*] hello_init: Routine called during initialization</li>
-<li>[*] hello_exit: outine called during exit/cleanup</li>
-<li>[*] MODULE_ : Information about the kernel module</li>
+<li>[-] init.h is needed to specify your initialization and cleanup functions.</li>
+<li>[-] module.h contains definitions of symbols and functions needed by loadable modules.</li>
+<li>[-] Unless your kernel module is under a free license recognised by the kernel, it is assumed to be proprietary and the kernel is &ldquo;tainted&rdquo; when the module is loaded.</li>
+<li>[-] hello_init: Routine called during initialization.</li>
+<li>[-] hello_exit: outine called during exit/cleanup.</li>
+<li>[-] MODULE_ : Information about the kernel module.</li>
 </ul>
 <h4 id="makefile">Makefile:</h4>
 <pre><code>obj-m += hello.o
@@ -112,10 +112,10 @@ clean:
 <li>[11249561.607050] Goodbye, Cruel World!</li>
 </ul>
 <ul>
-<li>[*] insmod - Simple program to insert a module into the Linux Kernel</li>
-<li>[*] rmmod - Simple program to remove a module from the Linux Kernel</li>
-<li>[*] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/<strong>kernel-version</strong>. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.</li>
-<li>[*] To check the kernel version which is currently being used on your setup, use &ldquo;uname -r&rdquo;. The -r option prints the kernel release version.</li>
+<li>[-] insmod - Simple program to insert a module into the Linux Kernel.</li>
+<li>[-] rmmod - Simple program to remove a module from the Linux Kernel.</li>
+<li>[-] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/<strong>kernel-version</strong>. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.</li>
+<li>[-] To check the kernel version which is currently being used on your setup, use &ldquo;uname -r&rdquo;. The -r option prints the kernel release version.</li>
 </ul>
 <h4 id="module-information">Module Information:</h4>
 <ul>
@@ -132,7 +132,7 @@ clean:
 <li>vermagic:       4.15.0-65-generic SMP mod_unload</li>
 </ul>
 <ul>
-<li>[*] modinfo - Show information about a Linux Kernel module</li>
+<li>[-] modinfo - Show information about a Linux Kernel module.</li>
 </ul>
 <h4 id="list-the-loaded-modules">List the loaded modules:</h4>
 <ul>
@@ -140,7 +140,7 @@ clean:
 <li>hello                  16384  0</li>
 </ul>
 <ul>
-<li>[*] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</li>
+<li>[-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</li>
 </ul>
 <h4 id="passing-params-to-the-module">Passing params to the module:</h4>
 <h3 id="updated-kernel-module">Updated kernel module:</h3>
@@ -192,9 +192,9 @@ MODULE_AUTHOR(&quot;That's ME! Yay!&quot;);
 <li><strong>[11250277.595506] Goodbye, Avengers!</strong></li>
 </ul>
 <ul>
-<li>[*] In the updated kernel code above, we have initialized the &ldquo;whom&rdquo; variable to &ldquo;World&rdquo; to take care of the scenario when no params are passed during module load. Hence, when the module is loaded without passing any params, we see the usual &ldquo;Hellp, World&rdquo; print.</li>
-<li>[*] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry.</li>
-<li>[*] S_IRUGO: Present READ permissions to User/Group/others</li>
+<li>[-] In the updated kernel code above, we have initialized the &ldquo;whom&rdquo; variable to &ldquo;World&rdquo; to take care of the scenario when no params are passed during module load. Hence, when the module is loaded without passing any params, we see the usual &ldquo;Hello, World&rdquo; print.</li>
+<li>[-] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry.</li>
+<li>[-] S_IRUGO: Present READ permissions to User/Group/others.</li>
 </ul>
 <p>These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understandig of the concepts in picture.</p>
 <p>I hope this helps :)</p>
