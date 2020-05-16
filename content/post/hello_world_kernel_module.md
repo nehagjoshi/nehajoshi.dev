@@ -2,7 +2,7 @@
 author = "Neha Joshi"
 title = "Introduction to loadable kernel module"
 date = 2020-05-15T18:05:08+05:30
-draft = true
+draft = false
 description = "A Hello World Kernel module"
 tags = [
     "Programming",
