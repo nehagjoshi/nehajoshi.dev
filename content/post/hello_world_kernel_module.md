@@ -59,6 +59,7 @@ Let us take a look at what this whole thing means:
 - [-] MODULE_ : Information about the kernel module.
 
 #### Makefile:
+```
     obj-m += hello.o
 
     all:
@@ -66,6 +67,7 @@ Let us take a look at what this whole thing means:
 
     clean:
             make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+```
 
 #### Loading and unloading the kernel module:
 
@@ -100,14 +102,14 @@ Let us take a look at what this whole thing means:
 
 #### List the loaded modules:
 
-* $ lsmod | grep hello
-* hello                  16384  0
+- $ lsmod | grep hello
+- hello                  16384  0
 
 - [-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.
 
 #### Passing params to the module:
 ### Updated kernel module:
-
+```
     #include <linux/init.h>
     #include <linux/module.h>
     #include <linux/moduleparam.h>
@@ -134,6 +136,7 @@ Let us take a look at what this whole thing means:
     MODULE_DESCRIPTION("This is a Hello World Module!");
     MODULE_VERSION("1.0");
     MODULE_AUTHOR("That's ME! Yay!");
+```
 
 ### Output:
 * root@nehajoshi:# insmod hello.ko
