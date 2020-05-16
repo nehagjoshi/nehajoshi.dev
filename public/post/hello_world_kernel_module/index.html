@@ -92,15 +92,14 @@
 <li>[-] MODULE_ : Information about the kernel module.</li>
 </ul>
 <h4 id="makefile">Makefile:</h4>
-<pre><code>obj-m += hello.o
+<pre><code>    obj-m += hello.o
 
-all:
-        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+    all:
+            make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
-clean:
-        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-</code></pre>
-<h4 id="loading-and-unloading-the-kernel-module">Loading and unloading the kernel module:</h4>
+    clean:
+            make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+</code></pre><h4 id="loading-and-unloading-the-kernel-module">Loading and unloading the kernel module:</h4>
 <ul>
 <li>root@nehajoshi:# insmod hello.ko</li>
 <li>root@nehajoshi:# dmesg</li>
@@ -135,42 +134,45 @@ clean:
 </ul>
 <h4 id="list-the-loaded-modules">List the loaded modules:</h4>
 <ul>
-<li>$ lsmod | grep hello</li>
-<li>hello                  16384  0</li>
-</ul>
-<ul>
-<li>[-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</li>
+<li>
+<p>$ lsmod | grep hello</p>
+</li>
+<li>
+<p>hello                  16384  0</p>
+</li>
+<li>
+<p>[-] lsmod is a trivial program which nicely formats the contents of the /proc/modules, showing what kernel modules are currently loaded.</p>
+</li>
 </ul>
 <h4 id="passing-params-to-the-module">Passing params to the module:</h4>
 <h3 id="updated-kernel-module">Updated kernel module:</h3>
-<pre><code>#include &lt;linux/init.h&gt;
-#include &lt;linux/module.h&gt;
-#include &lt;linux/moduleparam.h&gt;
+<pre><code>    #include &lt;linux/init.h&gt;
+    #include &lt;linux/module.h&gt;
+    #include &lt;linux/moduleparam.h&gt;
 
-MODULE_LICENSE(&quot;Dual BSD/GPL&quot;);
+    MODULE_LICENSE(&quot;Dual BSD/GPL&quot;);
 
-static char *whom = &quot;World&quot;;
+    static char *whom = &quot;World&quot;;
 
-static int hello_init(void)
-{
-    printk(KERN_ALERT &quot;Hello, %s\n&quot;, whom);
-    return 0;
-}
+    static int hello_init(void)
+    {
+        printk(KERN_ALERT &quot;Hello, %s\n&quot;, whom);
+        return 0;
+    }
 
-static void hello_exit(void)
-{
-    printk(KERN_ALERT &quot;Goodbye, %s!\n&quot;, whom);
-}
+    static void hello_exit(void)
+    {
+        printk(KERN_ALERT &quot;Goodbye, %s!\n&quot;, whom);
+    }
 
-module_init(hello_init);
-module_exit(hello_exit);
-module_param(whom, charp, S_IRUGO);
+    module_init(hello_init);
+    module_exit(hello_exit);
+    module_param(whom, charp, S_IRUGO);
 
-MODULE_DESCRIPTION(&quot;This is a Hello World Module!&quot;);
-MODULE_VERSION(&quot;1.0&quot;);
-MODULE_AUTHOR(&quot;That's ME! Yay!&quot;);
-</code></pre>
-<h3 id="output">Output:</h3>
+    MODULE_DESCRIPTION(&quot;This is a Hello World Module!&quot;);
+    MODULE_VERSION(&quot;1.0&quot;);
+    MODULE_AUTHOR(&quot;That's ME! Yay!&quot;);
+</code></pre><h3 id="output">Output:</h3>
 <ul>
 <li>root@nehajoshi:# insmod hello.ko</li>
 <li>root@nehajoshi:# dmesg</li>
