@@ -56,7 +56,7 @@
 </blockquote>
 <p>If I were to put a definition together for a device driver, I would say, its the brain of any hardware. Telling the body (hardware) what to do, telling the world (operation system), what the body is capable of. Quite literally, if the device driver malfunctions, or is not present at all, then the device is as good as dead, unusable.</p>
 <p>When I had joined NVIDIA, I was just starting out a career in system level programming. Not something to be proud about, but for a good number of years, I was unaware of even the init function which is called when the NVIDIA device driver is loaded. I was just looking at the parts of the code which was relevant to the work which I was doing, and ignoring the rest. Looking back at it, I can say that its not the right approach to take at all. When you are working on something, you should go out of your way to know the working of the code inside out, get familiar with it, and not wait till you are assigned some task which will take you to that area.</p>
-<p>I was watching an excellent talk by Jonathan Blow which he had presented at DevGAMM 2019: “Preventing the Collapse of Civilization”. The summary of the same has been listed quite wonderfully by Vedang in one of his blogs: (<a href="https://vedang.me/blog/preventing-the-collapse-of-civilization/">preventing-the-collapse-of-civilization</a>). To quote one of the points which caught me off guart was: &ldquo;Software is in decline. Both software robustness and programmer productivity is declining. We need to fight complexity and strive for simplicity in every step if we want to battle degradation and loss of capability&rdquo;.</p>
+<p>I was watching an excellent talk by Jonathan Blow which he had presented at DevGAMM 2019: “Preventing the Collapse of Civilization”. The summary of the same has been listed quite wonderfully by Vedang in one of his blogs: (<a href="https://vedang.me/blog/preventing-the-collapse-of-civilization/">preventing-the-collapse-of-civilization</a>). To quote one of the points which caught me off guard was: &ldquo;Software is in decline. Both software robustness and programmer productivity is declining. We need to fight complexity and strive for simplicity in every step if we want to battle degradation and loss of capability&rdquo;.</p>
 <p>We are not going to become masters in the field which we work in, unless we put in extra efforts to get acquainted with it. As a baby step towards unfurling the mystery of the behind-the-scene working of a device driver, I thought that a &ldquo;hello world kernel module&rdquo; would prove to be an excellent example. To quote from Chapter 1: &ldquo;An introduction to Device drivers&rdquo; from the amazing book: &ldquo;Linux Device Drivers&rdquo;:
 <strong>Each piece of code that can be added to the kernel at runtime is called a module. Each module is made up of object code that can be dynamically linked to the running kernel by the insmod program and can be unlinked by the rmmod program</strong></p>
 <p>Let us take a look at what this whole thing means:</p>
@@ -113,7 +113,7 @@
 <li>[-] insmod - Simple program to insert a module into the Linux Kernel.</li>
 <li>[-] rmmod - Simple program to remove a module from the Linux Kernel.</li>
 <li>[-] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/<strong>kernel-version</strong>. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.</li>
-<li>[-] To check the kernel version which is currently being used on your setup, use &ldquo;uname -r&rdquo;. The -r option prints the kernel release version.</li>
+<li>[-] To check the <strong>kernel-version</strong> which is currently being used on your setup, use &ldquo;uname -r&rdquo;. The -r option prints the kernel release version.</li>
 </ul>
 <h4 id="module-information">Module Information:</h4>
 <ul>
@@ -193,7 +193,7 @@
 <li>[-] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry.</li>
 <li>[-] S_IRUGO: Present READ permissions to User/Group/others.</li>
 </ul>
-<p>These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understandig of the concepts in picture.</p>
+<p>These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understanding of the concepts in picture.</p>
 <p>I hope this helps :)</p>
 <p>Happy Coding!</p>
 
