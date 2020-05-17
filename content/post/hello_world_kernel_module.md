@@ -12,7 +12,8 @@ tags = [
 +++
 
 Let us start by asking a simple question:
-> **What is a Device Driver?**
+
+**What is a Device Driver?**
 
 If I were to put a definition together for a device driver, I would say, its the brain of any hardware. Telling the body (hardware) what to do, telling the world (operation system), what the body is capable of. Quite literally, if the device driver malfunctions, or is not present at all, then the device is as good as dead, unusable.
 
