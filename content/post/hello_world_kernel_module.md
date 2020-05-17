@@ -18,7 +18,7 @@ If I were to put a definition together for a device driver, I would say, its the
 
 When I had joined NVIDIA, I was just starting out a career in system level programming. Not something to be proud about, but for a good number of years, I was unaware of even the init function which is called when the NVIDIA device driver is loaded. I was just looking at the parts of the code which was relevant to the work which I was doing, and ignoring the rest. Looking back at it, I can say that its not the right approach to take at all. When you are working on something, you should go out of your way to know the working of the code inside out, get familiar with it, and not wait till you are assigned some task which will take you to that area.
 
-I was watching an excellent talk by Jonathan Blow which he had presented at DevGAMM 2019: “Preventing the Collapse of Civilization”. The summary of the same has been listed quite wonderfully by Vedang in one of his blogs: ([preventing-the-collapse-of-civilization](https://vedang.me/blog/preventing-the-collapse-of-civilization/)). To quote one of the points which caught me off guart was: "Software is in decline. Both software robustness and programmer productivity is declining. We need to fight complexity and strive for simplicity in every step if we want to battle degradation and loss of capability". 
+I was watching an excellent talk by Jonathan Blow which he had presented at DevGAMM 2019: “Preventing the Collapse of Civilization”. The summary of the same has been listed quite wonderfully by Vedang in one of his blogs: ([preventing-the-collapse-of-civilization](https://vedang.me/blog/preventing-the-collapse-of-civilization/)). To quote one of the points which caught me off guard was: "Software is in decline. Both software robustness and programmer productivity is declining. We need to fight complexity and strive for simplicity in every step if we want to battle degradation and loss of capability". 
 
 We are not going to become masters in the field which we work in, unless we put in extra efforts to get acquainted with it. As a baby step towards unfurling the mystery of the behind-the-scene working of a device driver, I thought that a "hello world kernel module" would prove to be an excellent example. To quote from Chapter 1: "An introduction to Device drivers" from the amazing book: "Linux Device Drivers": 
 **Each piece of code that can be added to the kernel at runtime is called a module. Each module is made up of object code that can be dynamically linked to the running kernel by the insmod program and can be unlinked by the rmmod program**
@@ -82,7 +82,7 @@ Let us take a look at what this whole thing means:
 - [-] insmod - Simple program to insert a module into the Linux Kernel.
 - [-] rmmod - Simple program to remove a module from the Linux Kernel.
 - [-] modprobe - Add and remove modules from the Linux Kernel. It searches the module to be loaded in the /lib/modules/**kernel-version**. The main difference between modprobe and insmod is that, modprobe will also check the dependencies (if any) for the module to be loaded, and will load up those as well.
-- [-] To check the kernel version which is currently being used on your setup, use "uname -r". The -r option prints the kernel release version.
+- [-] To check the **kernel-version** which is currently being used on your setup, use "uname -r". The -r option prints the kernel release version.
 
 #### Module Information:
 
@@ -161,7 +161,7 @@ Let us take a look at what this whole thing means:
 - [-] module_param() function takes three params: variable, type, permissions mask to be used for an accompanying sysfs entry. 
 - [-] S_IRUGO: Present READ permissions to User/Group/others.
 
-These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understandig of the concepts in picture.
+These were some of the basics of a loadable kernel module. You can take this simplest hello world kernel code and then experiment on it to get better understanding of the concepts in picture.
 
 I hope this helps :)
 
