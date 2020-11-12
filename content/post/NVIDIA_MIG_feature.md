@@ -41,7 +41,7 @@ The MIG feature centers on the following primary concepts:
 of 7 GPU slices.
 
 
-## {{< figure src="/images/GPU_slice1.png" title="GPU virtualization" height=500 width=500 >}}
+## {{< figure src="/images/GPU_slice1.png" title="GPU virtualization" width=500 height=500 >}}
 
 # Benefits
 - ✓ Fault isolation
