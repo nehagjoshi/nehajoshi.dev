@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>NVIDIA Multi-Instance GPU</title>
+      <link>https://nehajoshi.dev/post/nvidia_mig_feature/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/post/nvidia_mig_feature/</guid>
+      <description>I worked on early development and testing of MIG support on vGPU, and was involved in the emulation and bringup of the Ampere GPU.
+Background Modern cloud computing datacenters rely on GPUs to deliver unparalleled performance for accelerated computing workloads such as AI, ML, etc. Workloads run in Virtual Machines (VMs) for security and management efficiency. So efficiently running VM with GPU is essential. As GPUs have increased in performance, many workloads no longer require a full GPU, so must share a GPU to maintain efficiency.</description>
+    </item>
+    
+    <item>
       <title>Introduction to loadable kernel module</title>
       <link>https://nehajoshi.dev/post/hello_world_kernel_module/</link>
       <pubDate>Fri, 15 May 2020 18:05:08 +0530</pubDate>
@@ -29,7 +39,7 @@ If I were to put a definition together for a device driver, I would say, its the
       
       <guid>https://nehajoshi.dev/about/</guid>
       <description>Hello There! Firstly, thanks for visiting my site. This is something which I was planning to do since a very long time. Finally this lockdown due to &amp;ldquo;Covid-19&amp;rdquo; has helped me gather my thoughts and put them on the slate.
-Some background about Neha Joshi - I was born and brought up in Nashik. I pursued a BTech degree in &amp;ldquo;Computer Engineering&amp;rdquo; from COEP (College of Engineering, Pune). I worked with Persistent Systems for ~11 months.</description>
+  Some background about Neha Joshi - I was born and brought up in Nashik. I pursued a BTech degree in &amp;ldquo;Computer Engineering&amp;rdquo; from COEP (College of Engineering, Pune). I worked with Persistent Systems for ~11 months.</description>
     </item>
     
     <item>

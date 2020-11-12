@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NVIDIA Ampere on Home</title>
+    <link>https://nehajoshi.dev/tags/nvidia-ampere/</link>
+    <description>Recent content in NVIDIA Ampere on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Sep 2020 18:05:08 +0530</lastBuildDate>
+    
+	<atom:link href="https://nehajoshi.dev/tags/nvidia-ampere/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NVIDIA Multi-Instance GPU</title>
+      <link>https://nehajoshi.dev/post/nvidia_mig_feature/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/post/nvidia_mig_feature/</guid>
+      <description>I worked on early development and testing of MIG support on vGPU, and was involved in the emulation and bringup of the Ampere GPU.
+Background Modern cloud computing datacenters rely on GPUs to deliver unparalleled performance for accelerated computing workloads such as AI, ML, etc. Workloads run in Virtual Machines (VMs) for security and management efficiency. So efficiently running VM with GPU is essential. As GPUs have increased in performance, many workloads no longer require a full GPU, so must share a GPU to maintain efficiency.</description>
+    </item>
+    
+  </channel>
+</rss>

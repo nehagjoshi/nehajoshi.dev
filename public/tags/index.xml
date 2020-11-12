@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2020 18:05:08 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2020 18:05:08 +0530</lastBuildDate>
     
 	<atom:link href="https://nehajoshi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloud computing</title>
+      <link>https://nehajoshi.dev/tags/cloud-computing/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/tags/cloud-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Center</title>
+      <link>https://nehajoshi.dev/tags/data-center/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/tags/data-center/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GPU</title>
+      <link>https://nehajoshi.dev/tags/gpu/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/tags/gpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NVIDIA Ampere</title>
+      <link>https://nehajoshi.dev/tags/nvidia-ampere/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/tags/nvidia-ampere/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualization</title>
+      <link>https://nehajoshi.dev/tags/virtualization/</link>
+      <pubDate>Sat, 05 Sep 2020 18:05:08 +0530</pubDate>
+      
+      <guid>https://nehajoshi.dev/tags/virtualization/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Device drivers</title>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://nehajoshi.dev/favicon.ico">
+    <link rel="canonical" href="https://nehajoshi.dev">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head><body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://nehajoshi.dev">Home</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About Me</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/post/">
+                                    
+                                    <span>Blog posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>NVIDIA Multi-Instance GPU - Sat, Sep 5, 2020</h1>
+    </div>
+    <p class="lead">NVIDIA Multi-Instance GPU – Accelerating the virtualized cloud computing datacenter</p>
+    <p>I worked on early development and testing of MIG support on vGPU, and was involved in the emulation and bringup of the Ampere GPU.</p>
+<h2 id="background">Background</h2>
+<p>Modern cloud computing datacenters rely on GPUs to deliver unparalleled performance for accelerated computing workloads such as AI, ML, etc. Workloads run in Virtual Machines (VMs) for security and management efficiency. So efficiently running VM with GPU is essential. As GPUs have increased in performance, many workloads no longer require a full GPU, so must share a GPU to maintain efficiency. Pre-Ampere architectures sequentially timeshare the GPU between the VMs, with each workload running for a few milliseconds. The GPU remains underutilized since none of these workloads fill it, and the workloads take longer to run as they wait for their timeshare. With Ampere, MIG makes it possible for the workloads to run in parallel on smaller fractions of the GPU, rather than timeshared on the full GPU.
+MIG allows GPUs to more efficiently address wider range of datacenter workloads by optimizing the GPU utilization.</p>
+<h2 id="introduction-to-gpu-virtualization">Introduction to GPU virtualization</h2>
+<p>The NVIDIA vGPU is NVIDIA’s architectural solution for GPU virtualization. Virtualization just creates virtual barriers between multiple virtual environments running on the same physical environment. So, the actual physical devices may manifest themselves as virtual devices, which may actually be a portion of the physical device.
+The primary benefit of the MIG feature is increasing GPU utilization by enabling the GPU to be shared effectively by parallel compute workloads on bare metal or on multiple vGPUs.</p>
+<p>The MIG feature centers on the following primary concepts:</p>
+<ul>
+<li>
+<p>[1] <strong>GPU instance</strong></p>
+</li>
+<li>
+<p>Creating GPU instances can be thought of as splitting one big GPU into multiple smaller GPUs (GPU instances) as each GPU instance has dedicated caches and memory bandwidth and dedicated compute resources</p>
+</li>
+<li>
+<p>[2] <strong>GPU Compute instance</strong></p>
+</li>
+<li>
+<p>A GPU Compute instance is created under a GPU instance and encapsulates all the Compute resources that can execute work on the GPU.</p>
+</li>
+<li>
+<p>[3] <strong>GPU slice</strong></p>
+</li>
+<li>
+<p>A GPU slice is the smallest fraction of the Ampere GPU. Each “GPU Slice” includes a “Sys Pipe”, one GPC, one L2 slice group, and access to a portion of frame buffer memory. The Ampere GPU supports a total
+of 7 GPU slices.</p>
+</li>
+</ul>
+<h2 id="hahahugoshortcode-s0-hbhb"><figure>
+    <img src="/images/GPU_slice1.png" width="500" height="500"/> <figcaption>
+            <h4>GPU virtualization</h4>
+        </figcaption>
+</figure>
+</h2>
+<h1 id="benefits">Benefits</h1>
+<ul>
+<li>✓ Fault isolation</li>
+<li>✓ Performance isolation</li>
+<li>✓ Memory bandwidth isolation</li>
+</ul>
+<h2 id="gpu-instance">GPU INSTANCE:</h2>
+<h2 id="hahahugoshortcode-s1-hbhb"><figure>
+    <img src="/images/GPU_instance.png" width="400" height="400"/> 
+</figure>
+</h2>
+<p>The above diagram shows the possible ways in which the GPU can be partitioned. At any given time, the GPU can be partitioned into any number of ways, as long as the blocks don’t overlap.</p>
+<h2 id="gpu-compute-instance">GPU COMPUTE INSTANCE:</h2>
+<p>Once the GPU instance is assigned to a VM, upon VM bootup, the user can:</p>
+<ul>
+<li>✓ Query the available compute instances</li>
+<li>✓ Set the required compute instances</li>
+</ul>
+<p>Setting the required compute instances depends on whether the user wishes to execute a single large workload, or multiple smaller workloads which are independent.</p>
+<ul>
+<li>Example: In case of container environment, we have multiple independent applications which can run in parallel. In that case, choosing the right number of compute instances to get these truly independent applications execute in parallel is a key to maximum utilization and performance.</li>
+</ul>
+<h2 id="assigning-gpu-partitions-to-a-vm">ASSIGNING GPU PARTITIONS TO A VM:</h2>
+<h2 id="hahahugoshortcode-s2-hbhb"><figure>
+    <img src="/images/MIG.png" width="650" height="650"/> 
+</figure>
+</h2>
+<h2 id="conclusion">CONCLUSION:</h2>
+<p>The beauty of MIG is that, all the VMs will now run in parallel on the Ampere. Any issues in VM-1 will not affect the other two VMs. Also, if VM-2 is executing any memory-intensive workload, then that will not affect the VM-1 and VM-3 in any way.
+Compute applications treat a “Compute instance” and its parent “GPU instance” as a single (smaller) GPU. The user can choose to execute the compute workload on any of the compute instances which are created in the GPU instance.
+Thus, <strong>MIG enables improved GPU utilization by enabling the GPU to be shared effectively by truly parallel compute workloads</strong>.</p>
+<h1 id="references">REFERENCES:</h1>
+<ul>
+<li>
+<p>✓ Inside NVIDIA&rsquo;s Multi-Instance GPU Feature - Jay Duluk, NVIDIA | Piotr Jaroszynski, NVIDIA
+GTC 2020 (<a href="https://developer.nvidia.com/gtc/2020/video/s21975-vid">https://developer.nvidia.com/gtc/2020/video/s21975-vid</a>)</p>
+</li>
+<li>
+<p>✓ Delivering High-Performance Remote Graphics with NVIDIA GRID Virtual GPU – Andy Currid, NVIDIA, GTC 2014 (<a href="http://on-demand.gputechconf.com/gtc/2014/presentations/S4725-hi-perf-graphics-nvidia-grid-virtual-gpus.pdf">http://on-demand.gputechconf.com/gtc/2014/presentations/S4725-hi-perf-graphics-nvidia-grid-virtual-gpus.pdf</a>)</p>
+</li>
+</ul>
+<h3 id="thank-you-andy-curridhttpswwwlinkedincominandycurrid-neo-jiahttpswwwlinkedincominneojia-and-kirti-wankhedehttpswwwlinkedincominkirti-wankhede-87249520-for-reviewing-the-early-drafts-of-this-blogpost">Thank you <a href="https://www.linkedin.com/in/andycurrid/">Andy Currid</a>, <a href="https://www.linkedin.com/in/neojia/">Neo Jia</a> and <a href="https://www.linkedin.com/in/kirti-wankhede-87249520/">Kirti Wankhede</a> for reviewing the early drafts of this blogpost!</h3>
+<p>Happy Coding!</p>
+
+    <h4><a href="https://nehajoshi.dev">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+        &copy; 
+        <a href="https://nehajoshi.dev" target="_blank">
+            Neha Joshi
+        </a>
+        <span id="thisyear">2020</span>
+        
+    </p>
+    <p class="text-center">
+        <a href="https://www.facebook.com/neha.g.joshi">Facebook</a> 
+        <a href="https://twitter.com/nehagjoshi">Twitter</a> 
+        <a href="https://www.linkedin.com/in/neha-joshi-8a660459">Linkedin</a> 
+        
+        
+    </p>
+</footer>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: false ,
+        onePass: true , 
+        speedFactor: 1 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></body>
+</html>
