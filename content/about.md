@@ -9,6 +9,8 @@ draft = false
 Hello There!
 Firstly, thanks for visiting my site. This is something which I was planning to do since a very long time. Finally this lockdown due to "Covid-19" has helped me gather my thoughts and put them on the slate. 
 
+{{< figure src="/images/me.jpg" height=200 width=200 >}}
+
 #### Some background about Neha Joshi - 
 
 I was born and brought up in Nashik. I pursued a BTech degree in "Computer Engineering" from COEP (College of Engineering, Pune). I worked with Persistent Systems for ~11 months. The only good thing that happened there was that I got introduced to my new found love - **C**. I had written lots of C programs during my engineering, but I was always focussed on having a career in Java (which was a very hot language at that time). Because of that new found love, I applied at NVIDIA Corporation and got selected after ~2 days of interviewing.
