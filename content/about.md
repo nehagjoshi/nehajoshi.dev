@@ -9,7 +9,7 @@ draft = false
 Hello There!
 Firstly, thanks for visiting my site. This is something which I was planning to do since a very long time. Finally this lockdown due to "Covid-19" has helped me gather my thoughts and put them on the slate. 
 
-{{< figure src="/images/me.jpg" height=200 width=200 >}}
+{{< figure src="/images/me.jpg" height="200" width="200" >}}
 
 #### Some background about Neha Joshi - 
 

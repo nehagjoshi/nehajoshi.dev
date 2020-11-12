@@ -41,7 +41,7 @@ The MIG feature centers on the following primary concepts:
 of 7 GPU slices.
 
 
-## {{< figure src="/images/GPU_slice1.png" title="GPU virtualization" width=500 height=500 >}}
+## {{< figure src="/images/GPU_slice1.png" title="GPU virtualization" width="500" height="500" >}}
 
 # Benefits
 - ✓ Fault isolation
@@ -49,7 +49,7 @@ of 7 GPU slices.
 - ✓ Memory bandwidth isolation
 
 ## GPU INSTANCE:
-## {{< figure src="/images/GPU_instance.png" height=400 width=400 >}}
+## {{< figure src="/images/GPU_instance.png" height="400" width="400" >}}
 
 The above diagram shows the possible ways in which the GPU can be partitioned. At any given time, the GPU can be partitioned into any number of ways, as long as the blocks don’t overlap.
 
@@ -62,7 +62,7 @@ Setting the required compute instances depends on whether the user wishes to exe
 - Example: In case of container environment, we have multiple independent applications which can run in parallel. In that case, choosing the right number of compute instances to get these truly independent applications execute in parallel is a key to maximum utilization and performance.
 
 ## ASSIGNING GPU PARTITIONS TO A VM:
-## {{< figure src="/images/MIG.png" height=650 width=650 >}}
+## {{< figure src="/images/MIG.png" height="650" width="650" >}}
 
 ## CONCLUSION:
 The beauty of MIG is that, all the VMs will now run in parallel on the Ampere. Any issues in VM-1 will not affect the other two VMs. Also, if VM-2 is executing any memory-intensive workload, then that will not affect the VM-1 and VM-3 in any way.
